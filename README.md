@@ -9,6 +9,7 @@ Data Extraction: Automated extraction of data from the homepages of Wikipedia.
 Data Transformation: Processing and structuring the raw extracted data for usability.
 Data Storage: Efficiently storing the processed data on Google Drive.
 Version Control: Employing DVC to manage and track different versions of the dataset.
+
 System Requirements
 Python 3.x
 Apache Airflow
