@@ -34,7 +34,7 @@ def fetch_wikipedia_did_you_know():
 
     did_you_know = [sentence.replace('(pictured)', '') for sentence in did_you_know]
 
-    prefix = "... that "
+    prefix = "... this "
     did_you_know = [sentence[len(prefix):].rstrip('?').capitalize() if sentence.startswith(prefix) else sentence for
                     sentence in did_you_know]
 
@@ -65,17 +65,17 @@ def version_and_push_data():
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2023, 12, 5),
+    'start_date': datetime(2021, 12, 5),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    'retry_delay': timedelta(minutes=10),
 }
 
 dag = DAG(
     'ali_etl_dag',
     default_args=default_args,
-    description='A simple ETL DAG',
+    description='Apache Airflow DAG',
     schedule_interval=timedelta(days=1),
     catchup=False
 )
