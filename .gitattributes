@@ -1,0 +1,10 @@
+* text=auto
+
+# Specific settings for known file types
+*.py text eol=lf
+*.txt text eol=lf
+.env text eol=lf
+docker-compose.yaml text eol=lf
+
+# Handle all logs with LF (though logs typically should not be tracked)
+*.log text eol=lf
